@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.a4c449cc30f8b2944b137b8426d862f1",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "perenoska_bedroom",
+      "friendly_name": "",
+      "mac_address": "60:01:94:23:AC:B0",
+      "compilation_time": "Nov 29 2023, 16:48:33",
+      "model": "d1_mini",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2023.11.6",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0,
+      "voice_assistant_version": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [
+      {
+        "name": "start_projector",
+        "key": 3144538914,
+        "args": []
+      }
+    ],
+    "api_version": {
+      "major": 1,
+      "minor": 9
+    },
+    "sensor": [
+      {
+        "object_id": "wifi_signal_perenoska_bedroom",
+        "key": 4189078283,
+        "name": "WiFi Signal_Perenoska Bedroom",
+        "unique_id": "60019423acb0-wifisignal",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": "signal_strength",
+        "unit_of_measurement": "dBm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "switch": [
+      {
+        "object_id": "perenoska_bedroom_restart",
+        "key": 2296825396,
+        "name": "Perenoska Bedroom Restart",
+        "unique_id": "perenoska_bedroomswitchperenoska_bedroom_restart",
+        "disabled_by_default": false,
+        "icon": "mdi:restart",
+        "entity_category": 1,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "video",
+        "key": 2982943478,
+        "name": "Video",
+        "unique_id": "perenoska_bedroomswitchvideo",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "audio",
+        "key": 1069811801,
+        "name": "Audio",
+        "unique_id": "perenoska_bedroomswitchaudio",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "hdd",
+        "key": 931844935,
+        "name": "HDD",
+        "unique_id": "perenoska_bedroomswitchhdd",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "outdoor_light",
+        "key": 1027795694,
+        "name": "Outdoor Light",
+        "unique_id": "perenoska_bedroomswitchoutdoor_light",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ]
+  }
+}

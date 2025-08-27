@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.79957b65cff2416827b7523150ff35c7",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "dallas-shower",
+      "friendly_name": "dallas_shower",
+      "mac_address": "30:AE:A4:1F:48:84",
+      "compilation_time": "Aug  6 2025, 19:47:52",
+      "model": "esp32dev",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2025.7.5",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      }
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "switch": [
+      {
+        "object_id": "dallas_shower_restart",
+        "key": 1740048637,
+        "name": "Dallas shower Restart",
+        "disabled_by_default": false,
+        "icon": "mdi:restart",
+        "entity_category": 1,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "dallas_shower_shutdown",
+        "key": 1891666002,
+        "name": "Dallas shower Shutdown",
+        "disabled_by_default": false,
+        "icon": "mdi:power",
+        "entity_category": 1,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "update": [],
+    "sensor": [
+      {
+        "object_id": "shower_temperature",
+        "key": 2116380140,
+        "name": "Shower Temperature",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": []
+  }
+}

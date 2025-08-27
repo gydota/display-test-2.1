@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01K2END1RDYYV4XQPA3RW2EPNS",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "display-02",
+      "friendly_name": "display-02",
+      "mac_address": "28:37:2F:88:43:8C",
+      "compilation_time": "Aug 27 2025, 02:23:26",
+      "model": "esp32-s3-devkitc-1",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2025.7.5",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": "",
+      "bluetooth_mac_address": "",
+      "api_encryption_supported": true,
+      "devices": [],
+      "areas": [],
+      "area": {
+        "area_id": 0,
+        "name": ""
+      }
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "update": [],
+    "sensor": [
+      {
+        "object_id": "sram_usage",
+        "key": 2740000676,
+        "name": "SRAM Usage",
+        "disabled_by_default": false,
+        "icon": "mdi:memory",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "data_size",
+        "unit_of_measurement": "KB",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "psram_usage",
+        "key": 1134994866,
+        "name": "PSRAM Usage",
+        "disabled_by_default": false,
+        "icon": "mdi:memory",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": "data_size",
+        "unit_of_measurement": "MB",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "esp32_internal_temperature",
+        "key": 3666607847,
+        "name": "ESP32 Internal Temperature",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      },
+      {
+        "object_id": "wifi_signal",
+        "key": 799351157,
+        "name": "WiFi Signal",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": "signal_strength",
+        "unit_of_measurement": "dBm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "legacy_last_reset_type": 0
+      }
+    ],
+    "text_sensor": [
+      {
+        "object_id": "ip_address",
+        "key": 3849966195,
+        "name": "IP Address",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "wifi_mac",
+        "key": 3309059342,
+        "name": "WiFi MAC",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "esphome_version",
+        "key": 2314437119,
+        "name": "ESPHome Version",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "debug_current_preset",
+        "key": 3188872574,
+        "name": "Debug Current Preset",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "device_class": ""
+      }
+    ],
+    "number": [
+      {
+        "object_id": "lvgl_screen_timeout",
+        "key": 3893882057,
+        "name": "LVGL screen timeout",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "min_value": -1.0,
+        "max_value": 720.0,
+        "step": 1.0,
+        "unit_of_measurement": "m",
+        "mode": 1,
+        "device_class": ""
+      }
+    ],
+    "climate": [
+      {
+        "object_id": "thermostat",
+        "key": 816166854,
+        "name": "thermostat",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "supports_current_temperature": true,
+        "supports_two_point_target_temperature": false,
+        "supported_modes": [
+          0,
+          3
+        ],
+        "visual_min_temperature": 10.0,
+        "visual_max_temperature": 30.0,
+        "visual_target_temperature_step": 0.5,
+        "visual_current_temperature_step": 0.5,
+        "legacy_supports_away": true,
+        "supports_action": true,
+        "supported_fan_modes": [],
+        "supported_swing_modes": [],
+        "supported_custom_fan_modes": [],
+        "supported_presets": [
+          1,
+          2
+        ],
+        "supported_custom_presets": [],
+        "supports_current_humidity": false,
+        "supports_target_humidity": false,
+        "visual_min_humidity": 30.0,
+        "visual_max_humidity": 99.0
+      }
+    ],
+    "light": [
+      {
+        "object_id": "backlight",
+        "key": 878769956,
+        "name": "Backlight",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "supported_color_modes": [
+          3
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": true,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "switch": [
+      {
+        "object_id": "touchscreen_block",
+        "key": 293566544,
+        "name": "Touchscreen block",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "light_relay_1",
+        "key": 205991669,
+        "name": "Light Relay 1",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "light_relay_2",
+        "key": 205991670,
+        "name": "Light Relay 2",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "light_relay_3",
+        "key": 205991671,
+        "name": "Light Relay 3",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ]
+  }
+}

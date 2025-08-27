@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.3042c14a1008ac492860866dded71c9f",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "4-sockets-black",
+      "friendly_name": "",
+      "mac_address": "BC:DD:C2:14:BD:C9",
+      "compilation_time": "Nov 29 2023, 16:57:08",
+      "model": "nodemcuv2",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2023.11.6",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0,
+      "voice_assistant_version": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 9
+    },
+    "sensor": [
+      {
+        "object_id": "wifi_signal_4sockets_black",
+        "key": 34068274,
+        "name": "WiFi Signal_4sockets_black",
+        "unique_id": "bcddc214bdc9-wifisignal",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": "signal_strength",
+        "unit_of_measurement": "dBm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "switch": [
+      {
+        "object_id": "4sockets_black_restart",
+        "key": 2780893219,
+        "name": "4sockets_black Restart",
+        "unique_id": "4-sockets-blackswitch4sockets_black_restart",
+        "disabled_by_default": false,
+        "icon": "mdi:restart",
+        "entity_category": 1,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "socket_black_1",
+        "key": 331880374,
+        "name": "socket_black_1",
+        "unique_id": "4-sockets-blackswitchsocket_black_1",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "socket_black_2",
+        "key": 331880373,
+        "name": "socket_black_2",
+        "unique_id": "4-sockets-blackswitchsocket_black_2",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "socket_black_3",
+        "key": 331880372,
+        "name": "socket_black_3",
+        "unique_id": "4-sockets-blackswitchsocket_black_3",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "socket_black_4",
+        "key": 331880371,
+        "name": "socket_black_4",
+        "unique_id": "4-sockets-blackswitchsocket_black_4",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ]
+  }
+}

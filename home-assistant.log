@@ -1,0 +1,569 @@
+2025-08-26 13:21:50.755 WARNING (SyncWorker_0) [homeassistant.loader] We found a custom integration display_tools which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you experience issues with Home Assistant
+2025-08-26 13:21:51.696 WARNING (Recorder) [homeassistant.components.recorder.util] The system could not validate that the sqlite3 database at //config/home-assistant_v2.db was shutdown cleanly
+2025-08-26 13:21:51.724 WARNING (Recorder) [homeassistant.components.recorder.util] Ended unfinished session (id=68 from 2025-08-26 06:45:01.520767)
+2025-08-26 13:21:54.870 WARNING (MainThread) [homeassistant.config_entries] Config entry 'gydota@gmail.com' for tuya integration could not authenticate: Authentication failed. Please re-authenticate
+2025-08-26 13:21:55.602 WARNING (ImportExecutor_0) [py.warnings] /usr/local/lib/python3.13/site-packages/google/__init__.py:2: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  __import__('pkg_resources').declare_namespace(__name__)
+
+2025-08-26 13:21:56.673 ERROR (MainThread) [homeassistant.components.esphome.manager] Unexpected device found at 192.168.88.16; expected `dallas-shower` with mac address `3c:84:27:c7:11:bc`, found `ld-2410` with mac address `a0:b7:65:6b:0a:4c`
+2025-08-26 13:21:59.583 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for display-02 @ 192.168.88.48: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.48', port=6053))]: [Errno 113] Connect call failed ('192.168.88.48', 6053) (SocketAPIError)
+2025-08-26 13:21:59.584 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for kotel @ 192.168.88.103: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.103', port=6053))]: [Errno 113] Connect call failed ('192.168.88.103', 6053) (SocketAPIError)
+2025-08-26 13:21:59.584 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for esphome-web-4c8830 @ 192.168.88.39: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.39', port=6053))]: [Errno 113] Connect call failed ('192.168.88.39', 6053) (SocketAPIError)
+2025-08-26 13:21:59.584 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for perenoska_bedroom @ 192.168.88.101: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.101', port=6053))]: [Errno 113] Connect call failed ('192.168.88.101', 6053) (SocketAPIError)
+2025-08-26 13:21:59.584 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for 4-sockets-black @ 192.168.88.105: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.105', port=6053))]: [Errno 113] Connect call failed ('192.168.88.105', 6053) (SocketAPIError)
+2025-08-26 13:41:09.879 WARNING (MainThread) [homeassistant.components.sensor] Entity sensor.display_02_sram_usage (<class 'homeassistant.components.esphome.sensor.EsphomeSensor'>) is using native unit of measurement 'KB' which is not a valid unit for the device class ('data_size') it is using; expected one of ['GB', 'bit', 'EiB', 'ZB', 'MB', 'YiB', 'TiB', 'KiB', 'kbit', 'MiB', 'ZiB', 'kB', 'PB', 'YB', 'TB', 'PiB', 'GiB', 'Gbit', 'EB', 'B', 'Mbit']; Please update your configuration if your entity is manually configured, otherwise create a bug report at https://github.com/home-assistant/core/issues?q=is%3Aopen+is%3Aissue+label%3A%22integration%3A+esphome%22
+2025-08-26 13:41:12.318 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (151 ms)
+2025-08-26 13:41:12.325 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 13:44:13.157 ERROR (Thread-5) [pychromecast.socket_client] [MIBOX4(192.168.88.34):8009] Failed to connect to service HostServiceInfo(host='192.168.88.34', port=8009), retrying in 5.0s
+2025-08-26 13:47:45.869 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-26 13:48:50.562 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-26 13:48:58.011 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (72 ms)
+2025-08-26 13:48:58.017 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 13:48:59.329 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (101 ms)
+2025-08-26 13:48:59.337 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 13:49:00.702 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (146 ms)
+2025-08-26 13:49:00.711 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 13:53:18.064 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (251 ms)
+2025-08-26 13:53:18.073 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 13:53:19.151 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 13:53:19.387 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 13:53:20.165 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 13:53:20.327 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 13:53:30.261 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities script.radio_1 are missing or not currently available
+2025-08-26 14:02:10.819 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-26 14:04:29.058 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-26 14:05:33.289 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-26 14:05:40.535 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for display-02 @ 192.168.88.48: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.48', port=6053))]: [Errno 111] Connect call failed ('192.168.88.48', 6053) (SocketAPIError)
+2025-08-26 14:05:44.541 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (150 ms)
+2025-08-26 14:05:44.550 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:07:19.689 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (243 ms)
+2025-08-26 14:07:19.698 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:07:20.728 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:07:20.958 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:07:21.872 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:07:22.016 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:07:22.186 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:09:47.427 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-26 14:12:38.133 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-26 14:13:42.853 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-26 14:13:50.061 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for display-02 @ 192.168.88.48: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.48', port=6053))]: [Errno 111] Connect call failed ('192.168.88.48', 6053) (SocketAPIError)
+2025-08-26 14:13:52.975 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (151 ms)
+2025-08-26 14:13:52.984 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:15:54.405 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (246 ms)
+2025-08-26 14:15:54.415 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:15:55.375 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:15:55.606 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:15:56.418 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:16:00.539 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities script.radio_2 are missing or not currently available
+2025-08-26 14:16:39.304 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities script.radio_3 are missing or not currently available
+2025-08-26 14:20:12.459 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (66 ms)
+2025-08-26 14:20:12.467 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:20:13.326 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (153 ms)
+2025-08-26 14:20:13.334 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:22:11.377 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-26 14:24:24.404 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-26 14:25:29.306 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-26 14:25:37.784 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (72 ms)
+2025-08-26 14:25:37.791 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:25:39.428 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (143 ms)
+2025-08-26 14:25:39.439 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:25:45.631 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (252 ms)
+2025-08-26 14:25:45.638 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:25:48.534 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:25:48.777 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:25:49.435 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:25:49.578 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:25:49.749 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:31:12.052 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-26 14:33:26.506 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-26 14:34:32.243 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-26 14:34:39.471 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for display-02 @ 192.168.88.48: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.48', port=6053))]: [Errno 111] Connect call failed ('192.168.88.48', 6053) (SocketAPIError)
+2025-08-26 14:34:43.607 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (152 ms)
+2025-08-26 14:34:43.616 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:37:51.572 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (244 ms)
+2025-08-26 14:37:51.581 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:37:52.696 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:37:52.910 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (268 ms)
+2025-08-26 14:37:52.920 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-26 14:37:52.964 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:37:59.135 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:38:02.957 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities script.radio_1 are missing or not currently available
+2025-08-26 14:38:23.370 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities script.radio_2 are missing or not currently available
+2025-08-26 14:38:57.637 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities script.radio_3 are missing or not currently available
+2025-08-26 14:39:08.477 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:39:08.638 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:39:22.013 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:39:22.175 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:39:26.130 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:39:26.280 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:40:08.746 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:40:08.899 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 14:40:09.673 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 100, in wrapper
+    return_value = func(self, *args, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 558, in media_play
+    media_controller.play()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pychromecast/controllers/media.py", line 630, in play
+    response_handler.wait_response()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pychromecast/response_handler.py", line 54, in wait_response
+    raise RequestTimeout(self._request, self._timeout)
+pychromecast.error.RequestTimeout: Execution of play timed out after 10.0 s.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2835, in async_call
+    response_data = await coro
+                    ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2878, in _execute_service
+    return await target(service_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 850, in entity_service_call
+    single_response = await _handle_entity_call(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        hass, entity, func, data, call.context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 922, in _handle_entity_call
+    result = await task
+             ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/media_player/__init__.py", line 855, in async_media_play
+    await self.hass.async_add_executor_job(self.media_play)
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 102, in wrapper
+    raise HomeAssistantError(
+        f"{self.__class__.__name__}.{func.__name__} Failed: {err}"
+    ) from err
+homeassistant.exceptions.HomeAssistantError: CastMediaPlayerEntity.media_play Failed: Execution of play timed out after 10.0 s.
+2025-08-26 14:40:11.287 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 100, in wrapper
+    return_value = func(self, *args, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 558, in media_play
+    media_controller.play()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pychromecast/controllers/media.py", line 630, in play
+    response_handler.wait_response()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pychromecast/response_handler.py", line 54, in wait_response
+    raise RequestTimeout(self._request, self._timeout)
+pychromecast.error.RequestTimeout: Execution of play timed out after 10.0 s.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2835, in async_call
+    response_data = await coro
+                    ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2878, in _execute_service
+    return await target(service_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 850, in entity_service_call
+    single_response = await _handle_entity_call(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        hass, entity, func, data, call.context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 922, in _handle_entity_call
+    result = await task
+             ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/media_player/__init__.py", line 855, in async_media_play
+    await self.hass.async_add_executor_job(self.media_play)
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 102, in wrapper
+    raise HomeAssistantError(
+        f"{self.__class__.__name__}.{func.__name__} Failed: {err}"
+    ) from err
+homeassistant.exceptions.HomeAssistantError: CastMediaPlayerEntity.media_play Failed: Execution of play timed out after 10.0 s.
+2025-08-26 14:40:12.281 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 100, in wrapper
+    return_value = func(self, *args, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 558, in media_play
+    media_controller.play()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pychromecast/controllers/media.py", line 630, in play
+    response_handler.wait_response()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/pychromecast/response_handler.py", line 54, in wait_response
+    raise RequestTimeout(self._request, self._timeout)
+pychromecast.error.RequestTimeout: Execution of play timed out after 10.0 s.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2835, in async_call
+    response_data = await coro
+                    ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2878, in _execute_service
+    return await target(service_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 850, in entity_service_call
+    single_response = await _handle_entity_call(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        hass, entity, func, data, call.context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 922, in _handle_entity_call
+    result = await task
+             ^^^^^^^^^^
+  File "/usr/src/homeassistant/homeassistant/components/media_player/__init__.py", line 855, in async_media_play
+    await self.hass.async_add_executor_job(self.media_play)
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/cast/media_player.py", line 102, in wrapper
+    raise HomeAssistantError(
+        f"{self.__class__.__name__}.{func.__name__} Failed: {err}"
+    ) from err
+homeassistant.exceptions.HomeAssistantError: CastMediaPlayerEntity.media_play Failed: Execution of play timed out after 10.0 s.
+2025-08-26 14:40:13.476 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities script.radio_3 are missing or not currently available
+2025-08-26 14:47:59.473 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-26 15:53:10.579 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 15:57:14.279 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 15:58:56.991 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 16:01:13.892 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities script.radio_2 are missing or not currently available
+2025-08-26 16:01:30.043 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 17:03:46.200 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:04:46.456 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:09:26.751 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:11:08.263 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:15:57.243 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:17:29.262 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:19:26.935 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:25:26.290 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:27:32.142 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:28:32.327 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:29:32.559 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:30:32.736 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:31:32.899 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:32:33.041 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:33:33.280 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:35:34.939 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:37:26.547 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:38:26.710 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:39:26.850 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:40:27.091 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:41:27.228 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:42:27.366 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:48:52.910 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:52:20.907 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:55:23.725 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 17:58:53.535 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:00:31.010 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:01:31.243 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:07:06.655 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:08:48.192 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:12:34.688 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:15:34.047 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:17:35.506 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:19:41.795 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:21:32.831 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:23:38.866 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:24:38.396 ERROR (MainThread) [frontend.js.modern.202508110] Uncaught error from Chrome 139.0.0.0 on Windows 10
+Error: Attempting to use a disconnected port object
+sendToOrigin (/extensionServiceWorker.js:47884:12)
+dAppUpdater (/extensionServiceWorker.js:47877:7)
+sendUpdates (/extensionServiceWorker.js:49341:5)
+connectSite (/extensionServiceWorker.js:49351:3)
+async onMessage (/extensionServiceWorker.js:47947:9)
+2025-08-26 18:27:33.122 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:30:13.583 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:35:09.101 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:36:09.253 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:37:09.407 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:40:11.254 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:42:11.055 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:46:03.904 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:50:07.159 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:56:11.627 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 18:57:11.859 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:04:43.464 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:06:28.014 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:12:42.143 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:14:32.391 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:19:31.777 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:20:31.986 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:29:07.894 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:29:54.654 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 19:33:24.417 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-26 19:35:38.478 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:37:25.999 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:40:04.467 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:42:26.929 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:45:58.585 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:47:36.130 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:52:35.103 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 19:58:35.242 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-26 20:24:25.437 ERROR (Thread-5) [pychromecast.socket_client] [MIBOX4(192.168.88.34):8009] Failed to connect to service HostServiceInfo(host='192.168.88.34', port=8009), retrying in 5.0s
+2025-08-26 21:47:37.478 ERROR (MainThread) [frontend.js.modern.202508110] Uncaught error from Chrome 139.0.0.0 on Windows 10
+Error: Attempting to use a disconnected port object
+sendToOrigin (/extensionServiceWorker.js:47884:12)
+dAppUpdater (/extensionServiceWorker.js:47877:7)
+sendUpdates (/extensionServiceWorker.js:49341:5)
+connectSite (/extensionServiceWorker.js:49351:3)
+async onMessage (/extensionServiceWorker.js:47947:9)
+2025-08-26 21:47:37.486 ERROR (MainThread) [frontend.js.modern.202508110] Uncaught error from Chrome 139.0.0.0 on Windows 10
+Error: Attempting to use a disconnected port object
+sendToOrigin (/extensionServiceWorker.js:47884:12)
+dAppUpdater (/extensionServiceWorker.js:47877:7)
+sendUpdates (/extensionServiceWorker.js:49341:5)
+connectSite (/extensionServiceWorker.js:49351:3)
+async onMessage (/extensionServiceWorker.js:47947:9)
+2025-08-26 21:48:58.745 ERROR (MainThread) [frontend.js.modern.202508110] Uncaught error from Chrome 139.0.0.0 on Windows 10
+Error: Attempting to use a disconnected port object
+sendToOrigin (/extensionServiceWorker.js:47884:12)
+dAppUpdater (/extensionServiceWorker.js:47877:7)
+sendUpdates (/extensionServiceWorker.js:49341:5)
+connectSite (/extensionServiceWorker.js:49351:3)
+async onMessage (/extensionServiceWorker.js:47947:9)
+2025-08-26 21:48:58.746 ERROR (MainThread) [frontend.js.modern.202508110] Uncaught error from Chrome 139.0.0.0 on Windows 10
+Error: Attempting to use a disconnected port object
+sendToOrigin (/extensionServiceWorker.js:47884:12)
+dAppUpdater (/extensionServiceWorker.js:47877:7)
+sendUpdates (/extensionServiceWorker.js:49341:5)
+connectSite (/extensionServiceWorker.js:49351:3)
+async onMessage (/extensionServiceWorker.js:47947:9)
+2025-08-27 01:24:57.101 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-27 01:26:02.631 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-27 01:26:11.012 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (73 ms)
+2025-08-27 01:26:11.023 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:26:11.352 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (87 ms)
+2025-08-27 01:26:11.352 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:26:12.186 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: Action display_tools.get_translations_esphome not found
+2025-08-27 01:26:12.626 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 01:26:12.753 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (164 ms)
+2025-08-27 01:26:12.763 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:27:10.234 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (75 ms)
+2025-08-27 01:27:10.238 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:27:12.724 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 01:27:12.852 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (164 ms)
+2025-08-27 01:27:12.860 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:32:03.231 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for display-02 @ 192.168.88.48: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.48', port=6053))]: [Errno 113] Connect call failed ('192.168.88.48', 6053) (SocketAPIError)
+2025-08-27 01:34:18.831 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 01:34:18.960 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (164 ms)
+2025-08-27 01:34:18.966 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:40:28.608 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 01:47:25.656 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-27 01:49:21.489 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-27 01:50:09.368 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-27 01:50:18.688 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 01:50:19.304 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 01:50:19.433 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (169 ms)
+2025-08-27 01:50:19.443 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:53:27.276 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-27 01:55:20.596 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-27 01:56:28.283 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-27 01:56:38.242 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 01:56:38.374 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (169 ms)
+2025-08-27 01:56:38.385 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:56:48.743 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 01:57:35.881 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (101 ms)
+2025-08-27 01:57:35.891 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:57:35.956 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (51 ms)
+2025-08-27 01:57:35.965 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 01:57:38.374 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 01:57:38.506 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (170 ms)
+2025-08-27 01:57:38.517 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:04:09.897 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-27 02:06:02.887 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-27 02:07:07.088 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-27 02:07:17.030 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:07:17.162 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (171 ms)
+2025-08-27 02:07:17.173 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:07:22.113 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][api.connection:142]: ESPHome Logs 2025.7.5 (192.168.88.33): Connection closed
+2025-08-27 02:07:43.831 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 02:11:39.570 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-27 02:12:29.833 ERROR (Thread-5) [pychromecast.socket_client] [MIBOX4(192.168.88.34):8009] Failed to connect to service HostServiceInfo(host='192.168.88.34', port=8009), retrying in 5.0s
+2025-08-27 02:12:44.251 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-27 02:12:54.214 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:12:54.341 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (164 ms)
+2025-08-27 02:12:54.352 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:13:00.269 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:00.393 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (241 ms)
+2025-08-27 02:13:00.405 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:13:12.870 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: Action display_tools.get_translations_esphome not found
+2025-08-27 02:13:12.871 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: Action display_tools.get_translations_esphome not found
+2025-08-27 02:13:12.871 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: Action display_tools.get_translations_esphome not found
+2025-08-27 02:13:23.659 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:23.742 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:23.871 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (265 ms)
+2025-08-27 02:13:23.881 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:13:23.930 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:24.016 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:25.882 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:25.917 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:25.946 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:26.086 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:26.165 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:26.210 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:26.252 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:27.748 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:27.790 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:27.828 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:28.130 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:28.210 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:28.242 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:28.284 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:28.571 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:28.613 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:28.652 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:28.696 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:29.039 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:29.113 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:29.247 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:29.262 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:29.319 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (292 ms)
+2025-08-27 02:13:29.319 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:13:29.416 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:32.996 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:33.055 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: draw_bg_img: Couldn't read the background image 	(in lv_draw_sw_rect.c line #391)
+2025-08-27 02:13:33.140 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:40.636 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:45.037 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:45.284 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:13:45.458 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:14:07.627 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:14:07.753 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (306 ms)
+2025-08-27 02:14:07.763 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:14:43.269 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:14:43.507 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:14:57.883 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:15:02.749 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:15:07.823 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:15:10.355 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:15:10.472 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (386 ms)
+2025-08-27 02:15:10.483 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:15:10.739 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:15:30.654 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:15:35.832 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:15:35.957 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (405 ms)
+2025-08-27 02:15:35.966 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:15:36.208 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:16:10.167 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:16:26.543 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:16:26.766 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:16:52.397 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:16:54.766 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:16:55.004 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:18:39.837 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:18:41.202 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:18:41.564 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:18:48.440 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F0156 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:21:11.873 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: api took a long time for an operation (92 ms)
+2025-08-27 02:21:11.879 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:21:14.342 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:21:14.471 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (166 ms)
+2025-08-27 02:21:14.478 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:24:29.158 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:279]: esphome.ota set Warning flag: unspecified
+2025-08-27 02:25:34.200 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:307]: esphome.ota cleared Warning flag
+2025-08-27 02:25:43.997 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 02:25:44.145 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:25:44.272 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (164 ms)
+2025-08-27 02:25:44.281 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:25:54.839 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:25:54.959 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (233 ms)
+2025-08-27 02:25:54.967 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 02:26:05.420 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:26:05.664 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:26:05.827 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:26:07.747 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:26:08.458 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: Action display_tools.get_translations_esphome not found
+2025-08-27 02:26:34.002 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 02:26:34.003 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 02:26:34.003 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 02:26:34.003 ERROR (Recorder) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: <exception str() failed>
+2025-08-27 02:26:51.526 ERROR (MainThread) [homeassistant] Error doing job: Task exception was never retrieved (None)
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/core.py", line 2768, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: Action display_tools.get_translations_esphome not found
+2025-08-27 02:26:54.057 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:26:54.283 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:30:31.673 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:30:33.969 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:30:36.405 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:30:38.961 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 02:32:53.727 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for display-02 @ 192.168.88.48: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.88.48', port=6053))]: [Errno 113] Connect call failed ('192.168.88.48', 6053) (SocketAPIError)
+2025-08-27 03:59:43.033 ERROR (Thread-5) [pychromecast.socket_client] [MIBOX4(192.168.88.34):8009] Failed to connect to service HostServiceInfo(host='192.168.88.34', port=8009), retrying in 5.0s
+2025-08-27 08:49:07.951 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 08:52:37.669 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 08:54:48.110 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 09:00:54.071 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 09:03:08.226 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 09:04:09.767 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 09:04:09.888 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (155 ms)
+2025-08-27 09:04:09.894 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 09:04:48.519 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][lvgl:000]: lv_draw_sw_letter: lv_draw_letter: glyph dsc. not found for U+F04DE 	(in lv_draw_sw_letter.c line #105)
+2025-08-27 09:04:48.637 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:407]: lvgl took a long time for an operation (238 ms)
+2025-08-27 09:04:48.644 WARNING (MainThread) [homeassistant.components.esphome.manager] display-02: [W][component:408]: Components should block for at most 30 ms
+2025-08-27 09:04:50.744 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities switch.4_relays_shchitova_l1 are missing or not currently available
+2025-08-27 09:04:52.225 WARNING (MainThread) [homeassistant.helpers.service] Referenced entities switch.4_relays_shchitova_l1 are missing or not currently available
+2025-08-27 09:08:56.048 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 09:25:49.519 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 09:31:38.123 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 09:34:15.253 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
+2025-08-27 09:36:08.168 ERROR (Thread-6) [pychromecast.socket_client] [Телевізор у кухні(192.168.88.41):8009] Failed to connect to service HostServiceInfo(host='192.168.88.41', port=8009), retrying in 5.0s
