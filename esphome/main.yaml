@@ -62,7 +62,7 @@ psram:
 api:
   password: ""
   encryption:
-    key: "K/5YMBGv6mTnm5WlsJNs06ne1Y76CJhfCra1T0NaHM8="
+    key: "................"
   on_client_connected:
     - if:
         condition:
