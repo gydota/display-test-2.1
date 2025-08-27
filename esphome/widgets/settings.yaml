@@ -1,0 +1,220 @@
+# Це ВВЕСЬ оновлений вміст для settings.yaml
+
+script:
+  - id: request_translations_from_ha
+    then:
+      - homeassistant.action:
+          action: display_tools.get_translations_esphome
+          data:
+            language: !lambda |-
+              if (id(is_ukrainian_active)) {
+                return "uk";
+              } else {
+                return "en";
+              }
+            category: entity_component
+            keys: '[
+              "component.vacuum.entity_component._.state.cleaning", "component.vacuum.entity_component._.state.docked", "component.vacuum.entity_component._.state.error", "component.vacuum.entity_component._.state.idle", "component.vacuum.entity_component._.state.off", "component.vacuum.entity_component._.state.on", "component.vacuum.entity_component._.state.paused", "component.vacuum.entity_component._.state.returning",
+              "component.cover.entity_component._.state.closed", "component.cover.entity_component._.state.closing", "component.cover.entity_component._.state.open", "component.cover.entity_component._.state.opening", "component.cover.entity_component._.state.stopped",
+              "component.climate.entity_component._.state_attributes.hvac_action.state.cooling", "component.climate.entity_component._.state_attributes.hvac_action.state.defrosting", "component.climate.entity_component._.state_attributes.hvac_action.state.drying", "component.climate.entity_component._.state_attributes.hvac_action.state.fan", "component.climate.entity_component._.state_attributes.hvac_action.state.heating", "component.climate.entity_component._.state_attributes.hvac_action.state.idle", "component.climate.entity_component._.state_attributes.hvac_action.state.off",
+              "component.weather.entity_component._.state.clear-night", "component.weather.entity_component._.state.cloudy", "component.weather.entity_component._.state.exceptional", "component.weather.entity_component._.state.fog", "component.weather.entity_component._.state.hail", "component.weather.entity_component._.state.lightning", "component.weather.entity_component._.state.lightning-rainy", "component.weather.entity_component._.state.partlycloudy", "component.weather.entity_component._.state.pouring", "component.weather.entity_component._.state.rainy", "component.weather.entity_component._.state.snowy", "component.weather.entity_component._.state.snowy-rainy", "component.weather.entity_component._.state.sunny", "component.weather.entity_component._.state.windy", "component.weather.entity_component._.state.windy-variant",
+              "component.alarm_control_panel.entity_component._.state.armed", "component.alarm_control_panel.entity_component._.state.armed_away", "component.alarm_control_panel.entity_component._.state.armed_custom_bypass", "component.alarm_control_panel.entity_component._.state.armed_home", "component.alarm_control_panel.entity_component._.state.armed_night", "component.alarm_control_panel.entity_component._.state.armed_vacation", "component.alarm_control_panel.entity_component._.state.arming", "component.alarm_control_panel.entity_component._.state.disarmed", "component.alarm_control_panel.entity_component._.state.disarming", "component.alarm_control_panel.entity_component._.state.pending", "component.alarm_control_panel.entity_component._.state.triggered"
+            ]'
+
+lvgl:
+  pages:
+    - id: settings_page
+      bg_color: color_slate_blue_gray
+      widgets:
+        # --- Мова ---
+        - obj:
+            id: language_bg
+            x: 20
+            y: 20
+            width: 440
+            height: 100
+            align: TOP_LEFT
+            bg_color: color_steel_blue
+            bg_opa: 20%
+            border_opa: TRANSP
+            radius: 10
+            widgets:
+              - label:
+                  id: language_label
+                  x: 20
+                  align: LEFT_MID
+                  text_font: nunito_20
+                  text_color: color_misty_blue
+                  text: "Мова"
+              # --- Кнопка-перемикач мови ---
+              - button:
+                  id: language_toggle_button
+                  x: -40
+                  align: RIGHT_MID
+                  width: 60
+                  height: 40
+                  bg_opa: TRANSP
+                  shadow_opa: TRANSP
+                  on_press:
+                    - globals.set:
+                        id: is_ukrainian_active
+                        value: !lambda 'return !id(is_ukrainian_active);'
+                    - lvgl.image.update:
+                        id: language_toggle_image
+                        src: !lambda |-
+                          if (id(is_ukrainian_active)) {
+                            return id(flags_ua_img);
+                          } else {
+                            return id(flags_us_img);
+                          }
+                    - script.execute: request_translations_from_ha
+                  widgets:
+                    - image:
+                        id: language_toggle_image
+                        align: CENTER
+                        src: !lambda |-
+                          if (id(is_ukrainian_active)) {
+                            return id(flags_ua_img);
+                          } else {
+                            return id(flags_us_img);
+                          }
+        # --- Підсвітка ---
+        - obj:
+            id: backlight_bg
+            x: 20
+            y: 140
+            width: 440
+            height: 100
+            align: TOP_LEFT
+            bg_color: color_steel_blue
+            bg_opa: 20%
+            border_opa: TRANSP
+            radius: 10
+            widgets:
+              - label:
+                  id: display_backlight_label
+                  x: 20
+                  align: LEFT_MID
+                  text_font: nunito_20
+                  text_color: color_misty_blue
+                  text: "Підсвітка"
+              - slider:
+                  id: display_backlight_brightness_slider
+                  x: -20
+                  radius: 10
+                  bg_color: color_slate_blue_gray
+                  align: RIGHT_MID
+                  width: 260
+                  height: 60
+                  min_value: 35
+                  max_value: 100
+                  value: 100
+                  indicator:
+                    bg_color: color_misty_blue
+                    radius: 10
+                  knob:
+                    bg_opa: TRANSP
+                  on_release:
+                    then:
+                      - light.turn_on:
+                          id: display_backlight
+                          brightness: !lambda 'return int(x) / 100.0;'
+        # --- Сплячий режим ---
+        - obj:
+            id: sleep_mode_bg
+            x: 20
+            y: 260
+            width: 440
+            height: 100
+            align: TOP_LEFT
+            bg_color: color_steel_blue
+            bg_opa: 20%
+            border_opa: TRANSP
+            radius: 10
+            widgets:
+              - label:
+                  id: display_timeout_label
+                  x: 20
+                  align: LEFT_MID
+                  text_font: nunito_20
+                  text_color: color_misty_blue
+                  text: "Сплячий режим"
+              - dropdown:
+                  id: display_timeout_dropdown
+                  x: 220
+                  width: 200
+                  align: LEFT_MID
+                  selected_index: !lambda 'return id(display_timeout);'
+                  options:
+                    - "Ніколи"
+                    - "1 хвилина"
+                    - "5 хвилин"
+                    - "10 хвилин"
+                    - "30 хвилин"
+                    - "1 година"
+                    - "6 годин"
+                    - "12 годин"
+                  bg_opa: TRANSP
+                  shadow_opa: TRANSP
+                  border_opa: TRANSP
+                  text_font: nunito_20
+                  text_color: color_misty_blue
+                  dropdown_list:
+                    align: CENTER
+                    bg_color: color_slate_blue_gray
+                    shadow_opa: TRANSP
+                    border_color: color_misty_blue
+                    border_width: 2
+                    text_font: nunito_20
+                    text_color: color_misty_blue
+                    text_line_space: 10
+                    pad_all: 8
+                    max_height: 360
+                    selected:
+                      checked:
+                        bg_color: color_steel_blue
+                        bg_opa: 20%
+                        text_color: color_misty_blue
+                      pressed:
+                        bg_opa: TRANSP
+                        text_color: color_misty_blue
+                  
+                  # --- ВИПРАВЛЕНО: `indicator` тепер на одному рівні з `dropdown_list` ---
+                  indicator:
+                    text_opa: TRANSP
+                    
+                  on_value:
+                    then:
+                      - number.set:
+                          id: display_timeout_number
+                          value: !lambda |-
+                            static const int backlight_time[] = {-1, 1, 5, 10, 30, 60, 360, 720};
+                            return backlight_time[x];
+                      - globals.set:
+                          id: display_timeout
+                          value: !lambda |-
+                            return x;
+    # - id: system_info_page
+    #   bg_color: color_slate_blue_gray
+    #   widgets:
+    #     # Тимчасовий заголовок
+    #     - label:
+    #         align: CENTER
+    #         y: -40
+    #         text: "Системна інформація"
+    #         text_font: nunito_24
+    #         text_color: color_misty_blue
+
+
+number:
+  - platform: template
+    id: display_timeout_number
+    name: LVGL screen timeout
+    optimistic: true
+    unit_of_measurement: "m"
+    initial_value: 10
+    restore_value: true
+    min_value: -1
+    max_value: 720
+    step: 1
+    mode: box

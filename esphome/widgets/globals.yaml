@@ -1,0 +1,95 @@
+# Це ВВЕСЬ вміст для нового файлу common/globals.yaml
+
+# --- Налаштування мови та дисплея ---
+- id: is_ukrainian_active
+  type: bool
+  restore_value: yes
+  initial_value: 'true'
+
+- id: display_timeout
+  type: int
+  restore_value: true
+  initial_value: "2"
+
+- id: display_lock
+  type: bool
+  restore_value: true
+  initial_value: "false"
+
+# --- Словники перекладів ---
+- id: vacuum_translations
+  type: std::map<std::string, std::string>
+- id: cover_translations
+  type: std::map<std::string, std::string>
+- id: climate_translations
+  type: std::map<std::string, std::string>
+- id: weather_translations
+  type: std::map<std::string, std::string>
+- id: alarm_panel_translations
+  type: std::map<std::string, std::string>
+
+# --- Змінні для медіаплеєра ---
+- id: repeat_modes
+  type: std::vector<std::string>
+  initial_value: '{"all", "one", "off"}'
+- id: repeat_icons
+  type: std::vector<std::string>
+  initial_value: '{"${repeat_all_icon}", "${repeat_one_icon}", "${repeat_off_icon}"}'
+- id: current_repeat_mode_idx
+  type: int
+  initial_value: '0'
+- id: tmp_repeat_mode
+  type: std::string
+  restore_value: no
+  initial_value: '"all"'
+- id: tmp_repeat_icon
+  type: std::string
+  restore_value: no
+  initial_value: '"${repeat_all_icon}"'
+- id: cover_url
+  type: std::string
+  restore_value: no
+  initial_value: '""'
+- id: duration_slider_user_interaction
+  type: bool
+  restore_value: no
+  initial_value: 'false'
+- id: slider_position
+  type: float
+  restore_value: no
+  initial_value: '0.0'
+- id: pending_cover_url
+  type: std::string
+  restore_value: no
+  initial_value: '""'
+- id: pending_repeat_value
+  type: std::string
+  restore_value: no
+  initial_value: '""'
+# --- Змінна для сторінки з радіо ---
+- id: active_radio_index
+  type: int
+  initial_value: '0'
+
+# --- ДОДАНО: Змінні для пилососа ---
+- id: vacuum_fan_speeds
+  type: std::vector<std::string>
+- id: vacuum_selected_fan_speed_index
+  type: int
+
+# --- ДОДАЙТЕ ЦЮ ЗМІННУ ДЛЯ ТЕРМОСТАТА ---
+- id: is_home_preset_active
+  type: bool
+  initial_value: 'true' # Або 'false', залежно від стану за замовчуванням
+
+# --- ДОДАЙТЕ ЦЮ ЗМІННУ ДЛЯ КОНДИЦІОНЕРА ---
+- id: air_conditioner_temp_hum_mode
+  type: bool
+  # false = режим налаштування температури
+  # true = режим налаштування вологості
+  initial_value: 'false'
+
+# --- ДОДАЙТЕ ЦЮ ЗМІННУ ДЛЯ ПАНЕЛІ ОХОРОНИ ---
+- id: alarm_panel_pending_action
+  type: std::string
+  initial_value: '""'

@@ -1,0 +1,399 @@
+substitutions:
+  alarm_panel_entity: "alarm_control_panel.security"
+  pin_code: "1234"
+  shield_home_icon: "\U000F068A"
+  shield_away_icon: "\U000F099D"
+  shield_night_icon: "\U000F1828"
+  shield_vacation_icon: "\U000F06BB"
+  shield_disarm_icon: "\U000F099E"
+  shield_arming_icon: "\U000F0498"
+  exit_icon: "\U000F0156"
+
+
+
+text_sensor:
+  - platform: homeassistant
+    id: alarm_panel_sensor_state
+    entity_id: ${alarm_panel_entity}
+    on_value:
+      - script.execute:
+          id: alarm_panel_get_and_set_translated_state
+          state_str: !lambda 'return id(alarm_panel_sensor_state).state;'
+      - if:
+          condition:
+            lambda: !lambda 'return x == "disarmed";'
+          then:
+            - lvgl.widget.show: alarm_panel_arm_home_btn
+            - lvgl.widget.show: alarm_panel_arm_away_btn
+            - lvgl.widget.show: alarm_panel_arm_night_btn
+            - lvgl.widget.show: alarm_panel_arm_vacation_btn
+            - lvgl.widget.hide: alarm_panel_disarm_btn
+            - lvgl.label.update:
+                id: alarm_panel_status
+                text_color: color_steel_blue
+            - lvgl.label.update:
+                id: alarm_panel_state_icon
+                text_color: color_blue
+                text: "${shield_disarm_icon}" # <--- ВИПРАВЛЕНО
+            - lvgl.obj.update:
+                id: alarm_panel_state_icon_bg
+                bg_color: color_blue
+          else:
+            - lvgl.label.update:
+                id: alarm_panel_status
+                text_color: color_crimson
+            - lvgl.widget.hide: alarm_panel_arm_home_btn
+            - lvgl.widget.hide: alarm_panel_arm_away_btn
+            - lvgl.widget.hide: alarm_panel_arm_night_btn
+            - lvgl.widget.hide: alarm_panel_arm_vacation_btn
+            - lvgl.widget.show: alarm_panel_disarm_btn
+      - if:
+          condition:
+            lambda: !lambda 'return x == "arming";'
+          then:
+            - lvgl.label.update:
+                id: alarm_panel_state_icon
+                text_color: color_gray
+                text: "${shield_arming_icon}" # <--- ВИПРАВЛЕНО
+            - lvgl.obj.update:
+                id: alarm_panel_state_icon_bg
+                bg_color: color_gray
+      - if:
+          condition:
+            lambda: !lambda 'return x == "armed_home";'
+          then:
+            - lvgl.label.update:
+                id: alarm_panel_state_icon
+                text_color: color_green
+                text: "${shield_home_icon}" # <--- ВИПРАВЛЕНО
+            - lvgl.obj.update:
+                id: alarm_panel_state_icon_bg
+                bg_color: color_green
+      - if:
+          condition:
+            lambda: !lambda 'return x == "armed_away";'
+          then:
+            - lvgl.label.update:
+                id: alarm_panel_state_icon
+                text_color: color_green
+                text: "${shield_away_icon}" # <--- ВИПРАВЛЕНО
+            - lvgl.obj.update:
+                id: alarm_panel_state_icon_bg
+                bg_color: color_green
+      - if:
+          condition:
+            lambda: !lambda 'return x == "armed_night";'
+          then:
+            - lvgl.label.update:
+                id: alarm_panel_state_icon
+                text_color: color_green
+                text: "${shield_night_icon}" # <--- ВИПРАВЛЕНО
+            - lvgl.obj.update:
+                id: alarm_panel_state_icon_bg
+                bg_color: color_green
+      - if:
+          condition:
+            lambda: !lambda 'return x == "armed_vacation";'
+          then:
+            - lvgl.label.update:
+                id: alarm_panel_state_icon
+                text_color: color_green
+                text: "${shield_vacation_icon}" # <--- ВИПРАВЛЕНО
+            - lvgl.obj.update:
+                id: alarm_panel_state_icon_bg
+                bg_color: color_green
+
+  - platform: homeassistant
+    id: alarm_panel_sensor_name
+    entity_id: ${alarm_panel_entity}
+    attribute: friendly_name
+    on_value:
+      - lvgl.label.update:
+          id: alarm_panel_label_name
+          text: !lambda return x;
+
+script:
+  - id: alarm_panel_get_and_set_translated_state
+    parameters:
+      state_str: string
+    then:
+      - lambda: |-
+          std::string state = state_str;
+          auto it = id(alarm_panel_translations).find(state);
+          std::string translated_state = (it != id(alarm_panel_translations).end()) ? it->second : state;
+          lv_label_set_text(id(alarm_panel_state_label), translated_state.c_str());
+
+lvgl:
+  pages:
+    - id: alarm_panel_page
+      bg_color: color_slate_blue_gray
+      widgets:
+        - obj:
+            id: alarm_panel_state_bg
+            x: 20
+            y: 20
+            width: 440
+            height: 440
+            align: TOP_LEFT
+            bg_color: color_steel_blue
+            bg_opa: 20%
+            border_opa: TRANSP
+            radius: 10
+            widgets:
+              - label:
+                  id: alarm_panel_state_label
+                  y: 20
+                  align: TOP_MID
+                  text: "Disarmed"
+                  text_font: nunito_36
+                  text_color: color_misty_blue
+              - obj: # Фон для іконки
+                  id: alarm_panel_state_icon_bg
+                  y: 160
+                  align: TOP_MID
+                  width: 120
+                  height: 120
+                  bg_color: color_blue
+                  radius: 60
+              - label: # Сама іконка
+                  id: alarm_panel_state_icon
+                  align: CENTER
+                  text: "${shield_disarm_icon}"
+                 # text_font: mdi_icons_64 # Потрібен шрифт більшого розміру
+                  text_color: color_white
+              - obj:
+                  id: alarm_panel_state_control
+                  y: 80
+                  width: 400
+                  height: 320
+                  align: TOP_MID
+                  bg_opa: TRANSP
+                  border_opa: TRANSP
+                  shadow_opa: TRANSP
+                  widgets:
+                    - button:
+                        id: alarm_panel_disarm_btn
+                        y: 0
+                        align: TOP_MID
+                        width: 320
+                        height: 60
+                        bg_color: color_green
+                        border_opa: TRANSP
+                        shadow_opa: TRANSP
+                        radius: 10
+                        on_press:
+                          - globals.set:
+                              id: alarm_panel_pending_action
+                              value: "disarm"
+                          - lvgl.page.show: alarm_panel_keypad_page
+                        widgets:
+                          - label:
+                              id: alarm_panel_state_btn_disarm
+                              align: CENTER
+                              text: "Disarm"
+                              text_font: nunito_24
+                              text_color: color_white
+                    - button:
+                        id: alarm_panel_arm_home_btn
+                        y: 80
+                        align: TOP_MID
+                        width: 320
+                        height: 60
+                        bg_color: color_red
+                        border_opa: TRANSP
+                        shadow_opa: TRANSP
+                        radius: 10
+                        on_press:
+                          - globals.set:
+                              id: alarm_panel_pending_action
+                              value: "arm_home"
+                          - lvgl.page.show: alarm_panel_keypad_page
+                        widgets:
+                          - label:
+                              id: alarm_panel_state_btn_home
+                              align: CENTER
+                              text: "Arm Home"
+                              text_font: nunito_24
+                              text_color: color_white
+                    - button:
+                        id: alarm_panel_arm_away_btn
+                        y: 160
+                        align: TOP_MID
+                        width: 320
+                        height: 60
+                        bg_color: color_red
+                        border_opa: TRANSP
+                        shadow_opa: TRANSP
+                        radius: 10
+                        on_press:
+                          - globals.set:
+                              id: alarm_panel_pending_action
+                              value: "arm_away"
+                          - lvgl.page.show: alarm_panel_keypad_page
+                        widgets:
+                          - label:
+                              id: alarm_panel_state_btn_away
+                              align: CENTER
+                              text: "Arm Away"
+                              text_font: nunito_24
+                              text_color: color_white
+                    - button:
+                        id: alarm_panel_arm_night_btn
+                        y: 240
+                        align: TOP_MID
+                        width: 150
+                        height: 60
+                        bg_color: color_red
+                        border_opa: TRANSP
+                        shadow_opa: TRANSP
+                        radius: 10
+                        on_press:
+                          - globals.set:
+                              id: alarm_panel_pending_action
+                              value: "arm_night"
+                          - lvgl.page.show: alarm_panel_keypad_page
+                        widgets:
+                          - label:
+                              id: alarm_panel_state_btn_night
+                              align: CENTER
+                              text: "Arm Night"
+                              text_font: nunito_24
+                              text_color: color_white
+                    - button:
+                        id: alarm_panel_arm_vacation_btn
+                        x: 170
+                        y: 240
+                        align: TOP_LEFT
+                        width: 150
+                        height: 60
+                        bg_color: color_red
+                        border_opa: TRANSP
+                        shadow_opa: TRANSP
+                        radius: 10
+                        on_press:
+                          - globals.set:
+                              id: alarm_panel_pending_action
+                              value: "arm_vacation"
+                          - lvgl.page.show: alarm_panel_keypad_page
+                        widgets:
+                          - label:
+                              id: alarm_panel_state_btn_vacation
+                              align: CENTER
+                              text: "Arm Vacation"
+                              text_font: nunito_24
+                              text_color: color_white
+    - id: alarm_panel_keypad_page
+      hidden: true
+      bg_color: color_slate_blue_gray
+      widgets:
+        - label:
+            id: alarm_panel_keypad_code_label
+            y: 40
+            align: TOP_MID
+            text: "Enter code"
+            text_font: nunito_36
+            text_color: color_misty_blue
+        - keyboard:
+            id: alarm_panel_keyboard_widget
+            y: 100
+            align: TOP_MID
+        
+        - button:
+            id: alarm_panel_return
+            x: 20
+            y: 400
+            width: 60
+            height: 60
+            align: TOP_LEFT
+            bg_color: color_steel_blue
+            bg_opa: 20%
+            shadow_opa: TRANSP
+            radius: 10
+            on_press:
+              - lvgl.page.show: alarm_panel_page
+            widgets:
+              - label:
+                  align: CENTER
+                  text_font: icons_28
+                  text_color: color_misty_blue
+                  text: "${exit_icon}"
+        - obj:
+            id: alarm_panel_bg_name
+            x: -20
+            y: 400
+            width: 360
+            height: 60
+            align: TOP_RIGHT
+            bg_color: color_steel_blue
+            bg_opa: 20%
+            border_opa: TRANSP
+            radius: 10
+            widgets:
+              - label:
+                  id: alarm_panel_label_name
+                  align: CENTER
+                  text_font: nunito_16
+                  text_color: color_misty_blue
+                  text: "friendly name"
+
+key_collector:
+  - id: alarm_panel_keypad
+    source_id: alarm_panel_keyboard_widget
+    min_length: 4
+    max_length: 4
+    end_keys: "#"
+    end_key_required: true
+    back_keys: "*"
+    allowed_keys: "0123456789*#"
+    timeout: 5s
+    on_progress:
+      - if:
+          condition:
+            lambda: !lambda 'return (x.compare(std::string{""}) != 0);'
+          then:
+            - lvgl.label.update:
+                id: alarm_panel_keypad_code_label
+                text: !lambda 'return x.c_str();'
+          else:
+            - lvgl.label.update:
+                id: alarm_panel_keypad_code_label
+                text: "Enter code"
+    on_result:
+      - if:
+          condition:
+            lambda: !lambda 'return x == "${pin_code}";'
+          then:
+            - if:
+                condition:
+                  lambda: !lambda 'return id(alarm_panel_pending_action) == "disarm";' # ВИПРАВЛЕНО
+                then:
+                  - homeassistant.action: { action: alarm_control_panel.alarm_disarm, data: { entity_id: "${alarm_panel_entity}", code: "${pin_code}" } }
+            - if:
+                condition:
+                  lambda: !lambda 'return id(alarm_panel_pending_action) == "arm_home";' # ВИПРАВЛЕНО
+                then:
+                  - homeassistant.action: { action: alarm_control_panel.alarm_arm_home, data: { entity_id: "${alarm_panel_entity}", code: "${pin_code}" } }
+            - if:
+                condition:
+                  lambda: !lambda 'return id(alarm_panel_pending_action) == "arm_away";' # ВИПРАВЛЕНО
+                then:
+                  - homeassistant.action: { action: alarm_control_panel.alarm_arm_away, data: { entity_id: "${alarm_panel_entity}", code: "${pin_code}" } }
+            - if:
+                condition:
+                  lambda: !lambda 'return id(alarm_panel_pending_action) == "arm_night";' # ВИПРАВЛЕНО
+                then:
+                  - homeassistant.action: { action: alarm_control_panel.alarm_arm_night, data: { entity_id: "${alarm_panel_entity}", code: "${pin_code}" } }
+            - if:
+                condition:
+                  lambda: !lambda 'return id(alarm_panel_pending_action) == "arm_vacation";' # ВИПРАВЛЕНО
+                then:
+                  - homeassistant.action: { action: alarm_control_panel.alarm_arm_vacation, data: { entity_id: "${alarm_panel_entity}", code: "${pin_code}" } }
+            - lvgl.page.show: alarm_panel_page
+          else:
+            - lvgl.label.update:
+                id: alarm_panel_keypad_code_label
+                text: "Wrong code"
+            - delay: 1s
+            - lvgl.label.update:
+                id: alarm_panel_keypad_code_label
+                text: "Enter code"
