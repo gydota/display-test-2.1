@@ -16,6 +16,7 @@ substitutions:
   battery_60_icon:    "\U0000e92b"
   battery_80_icon:    "\U0000e92c"
   battery_100_icon:   "\U0000e92d"
+  exit_icon: "\U0000e902"
 
 
 sensor:
@@ -94,48 +95,55 @@ sensor:
             return std::string(buffer);
         
 text_sensor:
-
+  # Отримує список швидкостей вентилятора з HA і перекладає його для випадаючого списку
   - platform: homeassistant
     id: vacuum_fan_speed_list_sensor
     entity_id: "${vacuum_entity}"
     attribute: fan_speed_list
     on_value: 
       - lambda: |-
-          ESP_LOGD("vacuum", "Fan speed list received: %s", x.c_str());
-          
-          std::vector<std::string> options;
-          std::string input = x;
-          
-          if (!input.empty() && input != "unknown") {
-
-            input.erase(std::remove(input.begin(), input.end(), '['), input.end());
-            input.erase(std::remove(input.begin(), input.end(), ']'), input.end());
-            input.erase(std::remove(input.begin(), input.end(), '\''), input.end());
-            input.erase(std::remove(input.begin(), input.end(), '"'), input.end());
-            
-            std::stringstream ss(input);
-            std::string item;
-            while (std::getline(ss, item, ',')) {
-              item.erase(0, item.find_first_not_of(" \t"));
-              item.erase(item.find_last_not_of(" \t") + 1);
-              if (!item.empty()) {
-                options.push_back(item);
+          std::vector<std::string> english_options;
+          if (!x.empty() && x != "unknown") {
+            JsonDocument doc;
+            if (deserializeJson(doc, x) == DeserializationError::Ok) {
+              for (const char* speed : doc.as<JsonArray>()) {
+                english_options.push_back(speed);
               }
             }
           }
           
-          if (options.empty()) {
-            options = {"Silent", "Standard", "Medium", "High"};
+          if (english_options.empty()) {
+            english_options = {"Silent", "Standard", "Strong", "Turbo"};
           }
           
-          id(vacuum_fan_speeds) = options;
+          // Зберігаємо оригінальні англійські назви для відправки команд в HA
+          id(vacuum_fan_speeds) = english_options;
+
+          // Створюємо перекладений список для відображення в UI
+          std::vector<std::string> translated_options;
+          static const std::map<std::string, std::string> fan_speed_map = {
+            {"Silent", "Тихий"},
+            {"Standard", "Стандарт"},
+            {"Strong", "Потужний"},
+            {"Turbo", "Турбо"}
+            // Додайте сюди інші можливі швидкості, якщо вони є
+          };
+
+          for (const auto& speed : english_options) {
+            auto it = fan_speed_map.find(speed);
+            if (it != fan_speed_map.end()) {
+              translated_options.push_back(it->second);
+            } else {
+              translated_options.push_back(speed); // Якщо перекладу немає, показуємо оригінал
+            }
+          }
 
           auto dropdown = id(vacuum_fan_speed_dropdown);
           if (dropdown != nullptr) {
-            dropdown->set_options(options);
+            dropdown->set_options(translated_options);
           }
 
-
+  # Отримує поточну швидкість і встановлює правильний індекс у випадаючому списку
   - platform: homeassistant
     id: vacuum_fan_speed_sensor
     entity_id: "${vacuum_entity}"
@@ -143,7 +151,6 @@ text_sensor:
     on_value: 
       - lambda: |-
           auto& speeds = id(vacuum_fan_speeds);
-          
           if (!speeds.empty()) {
             for (int i = 0; i < (int)speeds.size(); i++) {
               if (speeds[i] == x) {
@@ -152,11 +159,11 @@ text_sensor:
               }
             }
           }
-
       - lvgl.dropdown.update:
           id: vacuum_fan_speed_dropdown
-          selected_index: !lambda return id(vacuum_selected_fan_speed_index);
+          selected_index: !lambda 'return id(vacuum_selected_fan_speed_index);'
 
+  # Отримує назву пилососа
   - platform: homeassistant
     id: vacuum_name_sensor
     entity_id: "${vacuum_entity}"
@@ -164,76 +171,68 @@ text_sensor:
     on_value: 
       - lvgl.label.update:
           id: vacuum_label_name
-          text: !lambda return x;        
+          text: !lambda return x;
 
+  # Отримує стан пилососа і оновлює UI
   - platform: homeassistant
     id: vacuum_state_sensor
     entity_id: "${vacuum_entity}"
     on_value:
-      then:
-        - script.execute:
-            id: vacuum_get_and_set_translated_state
-            state_str: !lambda 'return id(vacuum_state_sensor).state;'
-
-        - lvgl.widget.hide: vacuum_battery_level_img
-        - lvgl.widget.hide: vacuum_charging_animation
-
-        - lvgl.widget.hide: vacuum_cleaning_animation
-        - lvgl.widget.hide: vacuum_go_home_animation
-        - lvgl.widget.hide: vacuum_not_animation
-
-        - lvgl.widget.hide: vacuum_bg_controls_cleaning
-        - lvgl.widget.hide: vacuum_bg_controls_paused
-        - lvgl.widget.hide: vacuum_bg_controls_docked
-        - lvgl.widget.hide: vacuum_bg_controls_idle
-        - lvgl.widget.hide: vacuum_bg_controls_returning
-        
-        - if:
-            condition:
-              lambda: 'return x == "cleaning";'
-            then:
-              - lvgl.widget.show: vacuum_cleaning_animation
-              - lvgl.widget.show: vacuum_bg_controls_cleaning
-              - lvgl.widget.show: vacuum_battery_level_img
-        
-        - if:
-            condition:
-              lambda: 'return x == "returning";'
-            then:
-              - lvgl.widget.show: vacuum_go_home_animation
-              - lvgl.widget.show: vacuum_bg_controls_returning
-              - lvgl.widget.show: vacuum_battery_level_img
-
-        - if:
-            condition:
-              lambda: 'return x == "docked";'
-            then:
-              - lvgl.widget.show: vacuum_not_animation
-              - lvgl.widget.show: vacuum_bg_controls_docked
-
-              - if:
-                  condition:
-                    lambda: 'return id(vacuum_battery_level_sensor).state != 100;'
-                  then:
-                    - lvgl.widget.show: vacuum_charging_animation
-                  else:
-                    - lvgl.widget.show: vacuum_battery_level_img
-
-        - if:
-            condition:
-              lambda: 'return x == "paused";'
-            then:
-              - lvgl.widget.show: vacuum_not_animation
-              - lvgl.widget.show: vacuum_bg_controls_paused
-              - lvgl.widget.show: vacuum_battery_level_img
-
-        - if:
-            condition:
-              lambda: 'return x == "idle";'
-            then:
-              - lvgl.widget.show: vacuum_not_animation
-              - lvgl.widget.show: vacuum_bg_controls_idle
-              - lvgl.widget.show: vacuum_battery_level_img
+      # --- Блок перекладу стану ---
+      - if:
+          condition: { lambda: 'return x == "cleaning";' }
+          then:
+            - lvgl.label.update: { id: vacuum_state_label, text: "Прибирання" }
+      - if:
+          condition: { lambda: 'return x == "docked";' }
+          then:
+            - lvgl.label.update: { id: vacuum_state_label, text: "На базі" }
+      - if:
+          condition: { lambda: 'return x == "returning";' }
+          then:
+            - lvgl.label.update: { id: vacuum_state_label, text: "Повернення" }
+      - if:
+          condition: { lambda: 'return x == "paused";' }
+          then:
+            - lvgl.label.update: { id: vacuum_state_label, text: "Пауза" }
+      - if:
+          condition: { lambda: 'return x == "idle";' }
+          then:
+            - lvgl.label.update: { id: vacuum_state_label, text: "Очікування" }
+      - if:
+          condition: { lambda: 'return x == "error";' }
+          then:
+            - lvgl.label.update: { id: vacuum_state_label, text: "Помилка" }
+      
+      # --- Блок оновлення анімацій та видимості кнопок ---
+      - lvgl.widget.hide: [vacuum_battery_level_img, vacuum_charging_animation, vacuum_cleaning_animation, vacuum_go_home_animation, vacuum_not_animation, vacuum_bg_controls_cleaning, vacuum_bg_controls_paused, vacuum_bg_controls_docked, vacuum_bg_controls_idle, vacuum_bg_controls_returning]
+      - if:
+          condition: { lambda: 'return x == "cleaning";' }
+          then:
+            - lvgl.widget.show: [vacuum_cleaning_animation, vacuum_bg_controls_cleaning, vacuum_battery_level_img]
+      - if:
+          condition: { lambda: 'return x == "returning";' }
+          then:
+            - lvgl.widget.show: [vacuum_go_home_animation, vacuum_bg_controls_returning, vacuum_battery_level_img]
+      - if:
+          condition: { lambda: 'return x == "docked";' }
+          then:
+            - lvgl.widget.show: [vacuum_not_animation, vacuum_bg_controls_docked]
+            - if:
+                condition:
+                  lambda: 'return id(vacuum_battery_level_sensor).state != 100;'
+                then:
+                  - lvgl.widget.show: vacuum_charging_animation
+                else:
+                  - lvgl.widget.show: vacuum_battery_level_img
+      - if:
+          condition: { lambda: 'return x == "paused";' }
+          then:
+            - lvgl.widget.show: [vacuum_not_animation, vacuum_bg_controls_paused, vacuum_battery_level_img]
+      - if:
+          condition: { lambda: 'return x == "idle";' }
+          then:
+            - lvgl.widget.show: [vacuum_not_animation, vacuum_bg_controls_idle, vacuum_battery_level_img]
 
             
 lvgl:
@@ -877,19 +876,8 @@ lvgl:
                   text: "friendly name"
 
 
-script:
-  - id: vacuum_get_and_set_translated_state
-    parameters:
-      state_str: string
-    then:   
-      - lambda: |-
-          std::string state = state_str;
-          
-          auto it = id(vacuum_translations).find(state);
-          std::string translated_state = (it != id(vacuum_translations).end()) ? it->second : state;
 
-          lv_label_set_text(id(vacuum_state_label), translated_state.c_str());
-
+  
 
 
 
