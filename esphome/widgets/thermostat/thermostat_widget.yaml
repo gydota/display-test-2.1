@@ -1,20 +1,15 @@
-# https://esphome.io/components/climate/thermostat.html
-
+# Це ВВЕСЬ фінальний, виправлений та самодостатній вміст файлу
 
 substitutions:
-
-  thermostat_name:               "thermostat"
+  thermostat_name: "thermostat"
   thermostat_temperature_entity: "sensor.zig_temperature_02_temperature"
-  thermostat_entity:             "climate.display_02_thermostat"
-
-  heating_icon:       "\U0000e936"
-  temperature_icon:   "\U0000e939"
-  pm_home_icon:       "\U000F0826"
-  pm_away_icon:       "\U000F1A46"
-  power_icon:         "\U0000e909"
-  exit_icon:          "\U0000e902"
-
-
+  thermostat_entity: "climate.display_02_thermostat"
+  heating_icon: "\U0000e936"
+  temperature_icon: "\U0000e939"
+  pm_home_icon: "\U000F0826"
+  pm_away_icon: "\U000F1A46"
+  power_icon: "\U0000e909"
+  exit_icon: "\U0000e902"
 
 climate:
   - platform: thermostat
@@ -43,12 +38,12 @@ climate:
       - name: Away
         default_target_temperature_low: 18
 
+
 switch:
   - platform: homeassistant
     id: thermostat_relay
     name: "Heating Relay"
-    entity_id: switch.12_relays_boilerroom_l8 # Change the entity from your Home Assistant
-    
+    entity_id: switch.12_relays_boilerroom_l8
     on_turn_on:
 
       - lvgl.meter.update:
@@ -119,7 +114,6 @@ switch:
 
     restore_mode: RESTORE_DEFAULT_OFF
 
-
 sensor:
 
   # Thermostat temperature sensor
@@ -173,7 +167,6 @@ sensor:
           id: thermostat_arc_current_temp
           value: !lambda return x;
 
-
 text_sensor:
 
   - platform: template
@@ -210,9 +203,18 @@ text_sensor:
     
     attribute: hvac_action
     on_value:
-      - script.execute:
-          id: thermostat_get_and_set_translated_state
-          state_str: !lambda 'return id(thermostat_sensor_hvac_mode).state;'
+      - if:
+          condition: { lambda: 'return x == "heating";' }
+          then:
+            - lvgl.label.update: { id: thermostat_state_label, text: "Нагрів" }
+      - if:
+          condition: { lambda: 'return x == "off";' }
+          then:
+            - lvgl.label.update: { id: thermostat_state_label, text: "Вимкнено" }
+      - if:
+          condition: { lambda: 'return x == "idle";' }
+          then:
+            - lvgl.label.update: { id: thermostat_state_label, text: "Очікування" }
 
   # Thermostat state
   - platform: homeassistant
@@ -237,6 +239,29 @@ text_sensor:
             - lvgl.label.update:
                 id: thermostat_power_icon
                 text_color: color_deep_orange
+script:
+  - id: update_thermostat_preset_display
+    then:
+      - if:
+          condition:
+            lambda: !lambda 'return id(is_home_preset_active);'
+          then:
+            - lvgl.obj.update: 
+                id: thermostat_preset_mode_bg
+                bg_color: color_green
+            - lvgl.label.update: 
+                id: thermostat_preset_mode_icon
+                text: "${pm_home_icon}"
+                text_color: color_green
+          else:
+            - lvgl.obj.update: 
+                id: thermostat_preset_mode_bg
+                bg_color: color_red
+            - lvgl.label.update: 
+                id: thermostat_preset_mode_icon
+                text: "${pm_away_icon}"
+                text_color: color_red
+
 lvgl:
 
   gradients:
@@ -761,18 +786,3 @@ lvgl:
             on_press:
               - lvgl.page.show: devices_page
               - lvgl.widget.show: menu_controls_main
-
-
-script:
-  - id: thermostat_get_and_set_translated_state
-    parameters:
-      state_str: string
-    then:   
-      - lambda: |-
-          std::string state = state_str;
-          
-          auto it = id(climate_translations).find(state);
-          std::string translated_state = (it != id(climate_translations).end()) ? it->second : state;
-          
-          lv_label_set_text(id(thermostat_state_label), translated_state.c_str());
-
